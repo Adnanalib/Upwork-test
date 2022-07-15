@@ -14,8 +14,8 @@
 
       <p class="pt-4">{{ message }}</p>
     </div>
-    <div v-if="postImage" class="relative h-56 md:h-96 bg-white">
-      <img :src="postImage" class="object-cover w-full" loading="lazy" />
+    <div v-if="postImage" class="relative h-56  bg-white">
+      <img :src="postImage" class="object-cover w-full"  />
     </div>
 
     <!-- Post Footer -->
@@ -24,17 +24,17 @@
     >
       <div class="inputIcon p-3 rounded-none rounded-bl-2xl">
         <ThumbUpIcon class="h-4" />
-        <p class="text-xs sm:text-base">Like</p>
+        <p class="text-xs">Like</p>
       </div>
 
       <div class="inputIcon p-3 rounded-none">
         <ChatAltIcon class="h-4" />
-        <p class="text-xs sm:text-base">Comment</p>
+        <p class="text-xs'">Comment</p>
       </div>
 
       <div class="inputIcon p-3 rounded-none rounded-br-2xl">
         <ShareIcon class="h-4" />
-        <p class="text-xs sm:text-base">Share</p>
+        <p class="text-xs">Share</p>
       </div>
     </div>
   </div>
@@ -44,7 +44,7 @@
 import { ChatAltIcon, ShareIcon, ThumbUpIcon } from "@heroicons/vue/outline";
 export default {
   props: ["name", "message", "email", "timestamp", "image", "postImage"],
-  setup() {
+  data() {
     return {};
   },
   components: { ChatAltIcon, ShareIcon, ThumbUpIcon },
